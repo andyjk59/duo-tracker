@@ -95,7 +95,7 @@
   padding: 12px 14px;
   border-radius: 10px;
   border: 1px solid var(--color-accent);
-  background: #fffaf0;
+  background: #fffafd;
 }
 
 .textarea-field {
@@ -121,7 +121,7 @@
 }
 
 .tab.active {
-  background: #fffaf0;
+  background: #fffafd;
 }
 
 .empty-state {

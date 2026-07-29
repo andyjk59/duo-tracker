@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import type { Person } from "../data/types";
 import { PEOPLE, otherPerson } from "../config";
+import Avatar from "../components/Avatar";
 
 export default function ProfileHome({ person }: { person: Person }) {
   const navigate = useNavigate();
@@ -14,20 +15,7 @@ export default function ProfileHome({ person }: { person: Person }) {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, marginBottom: 8 }}>
-        <div
-          style={{
-            width: 78,
-            height: 78,
-            borderRadius: "50%",
-            background: "var(--color-surface)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "visible",
-          }}
-        >
-          <img src={PEOPLE[person].icon} alt="" style={{ width: 93, height: 93, objectFit: "contain" }} />
-        </div>
+        <Avatar name={PEOPLE[person].name} color={PEOPLE[person].color} size={78} />
         <h1 style={{ fontSize: 28, margin: 0 }}>Hi, {PEOPLE[person].name}</h1>
       </div>
 

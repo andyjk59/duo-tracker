@@ -1,5 +1,3 @@
-import personAIcon from "./assets/icons/person-a.png";
-import personBIcon from "./assets/icons/person-b.png";
 import type { Person } from "./data/types";
 
 /**
@@ -9,15 +7,15 @@ import type { Person } from "./data/types";
  *
  * To personalize:
  * 1. Change the `name` fields below to your own names.
- * 2. Replace src/assets/icons/person-a.png and person-b.png with your own
- *    avatar images (square, ~200x200px works well).
+ * 2. Change `color` if you want a different accent color per person (used
+ *    for their initials avatar). Any CSS color value works.
  * 3. Change `appName` to whatever you want the app to be called.
  */
 export const appName = "Duo Tracker";
 
-export const PEOPLE: Record<Person, { name: string; icon: string }> = {
-  personA: { name: "Alex", icon: personAIcon },
-  personB: { name: "Sam", icon: personBIcon },
+export const PEOPLE: Record<Person, { name: string; color: string }> = {
+  personA: { name: "Alex", color: "#c9679f" },
+  personB: { name: "Sam", color: "#7c6fb0" },
 };
 
 export function otherPerson(person: Person): Person {

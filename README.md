@@ -74,20 +74,20 @@ npm run dev
 
 This is meant to be forked and made your own. Everything below can be changed without touching the app's structure.
 
-### Your names and avatars
+### Your names and avatar colors
 
 Edit **`src/config.ts`**:
 
 ```ts
 export const appName = "Duo Tracker";
 
-export const PEOPLE: Record<Person, { name: string; icon: string }> = {
-  personA: { name: "Alex", icon: personAIcon },
-  personB: { name: "Sam", icon: personBIcon },
+export const PEOPLE: Record<Person, { name: string; color: string }> = {
+  personA: { name: "Alex", color: "#c9679f" },
+  personB: { name: "Sam", color: "#7c6fb0" },
 };
 ```
 
-Change the `name` fields to your own names, and swap `src/assets/icons/person-a.png` / `person-b.png` for your own avatar images (square, roughly 200×200px works well — simple line-art or a photo both work fine).
+Change the `name` fields to your own names. Each person gets a simple initials avatar (first letter of their name) in the `color` you set — pick any CSS color, ideally two that read as distinct from each other. No image files to swap out.
 
 Internally the two profiles are always called `personA` and `personB` (used in URLs and the database) — you only need to change the display names above, not the code that references them.
 
@@ -132,7 +132,7 @@ Because routing is hash-based (`/#/personA/logs`), there's no server-side route 
 
 ```
 src/
-  config.ts              — names, avatars, app name (the file you personalize)
+  config.ts              — names, avatar colors, app name (the file you personalize)
   data/
     types.ts              — data model
     seedPlan.ts            — the workout plan (the other file you personalize)

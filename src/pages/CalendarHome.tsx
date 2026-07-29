@@ -120,7 +120,7 @@ export default function CalendarHome({ person }: { person: Person }) {
                     justifyContent: "center",
                     fontWeight: isToday ? 700 : 400,
                     fontSize: 13,
-                    background: isToday ? "rgba(217,185,155,0.4)" : "transparent",
+                    background: isToday ? "rgba(201,103,159,0.4)" : "transparent",
                     border: isToday ? "1.5px solid var(--color-accent)" : "none",
                   }}
                 >
